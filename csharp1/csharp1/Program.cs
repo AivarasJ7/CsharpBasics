@@ -41,9 +41,6 @@ namespace csharp1
             Console.WriteLine($"Study program: {studyProgram}");
             Console.WriteLine($"GPA: {gpa}");
             
-           
-
-
         }
     }
 }
