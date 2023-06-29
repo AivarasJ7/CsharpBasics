@@ -20,14 +20,9 @@ namespace csharp2
             * *
             * *
             ****
-            6.Susikurkite reikiamus kintamuosius užduočiai atlikti. Į ekraną išveskite:
-            Automobilio { markė}
-            { modelis} ({ metai}
-            m.) rida - { rida}
-            km.
-            Tarp { }
-            nurodyti reikiami kintamieji, šiose vietose jų reikšmės turi būti įsistatytos.*/
-
+            6. Susikurkite reikiamus kintamuosius užduočiai atlikti. Į ekraną išveskite:
+            Automobilio {markė} {modelis} ({metai} m.) rida - {rida} km.
+            Tarp {} nurodyti reikiami kintamieji, šiose vietose jų reikšmės turi būti įsistatytos.+ */
         }
     }
 }
