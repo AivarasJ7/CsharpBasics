@@ -21,8 +21,6 @@ namespace assignment5
                 int result = num1 * i;
                 Console.WriteLine($"{num1} * {i} = {result}");
             }
-
-
         }
     }
 }
