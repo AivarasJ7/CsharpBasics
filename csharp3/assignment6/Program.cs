@@ -13,8 +13,6 @@
 
             Console.WriteLine($"Skaičius: {number}");
             Console.WriteLine($"Skaitmenų sandaugą: {product}");    //Išveskite į ekraną šio skaičiaus skaitmenų sandaugą.
-
-
         }
     }
 }
