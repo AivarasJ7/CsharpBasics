@@ -13,8 +13,6 @@
             Console.WriteLine(num1);
             Console.WriteLine(square);
             Console.WriteLine(thirdpower);
-
-            
         }
     }
 }
