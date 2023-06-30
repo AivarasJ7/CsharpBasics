@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             int number = 25;
+
             Console.Write($"{number}{number}{number}{number}{number}");
         }
     }

@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             string name = "Aivaras";
+
             Console.WriteLine($"Hello {name}");
         }
     }
