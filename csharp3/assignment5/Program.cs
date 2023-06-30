@@ -19,7 +19,7 @@ namespace assignment5
             for (int i = 1; i <= table; i++)
             {
                 int result = num1 * i;
-                Console.WriteLine(num1 + " * " + i + " = " + result);
+                Console.WriteLine($"{num1} * {i} = {result}");
             }
 
 
