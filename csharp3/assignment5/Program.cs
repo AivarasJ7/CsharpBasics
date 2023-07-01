@@ -14,9 +14,9 @@ namespace assignment5
             */
 
             int num1 = 4;
-            int table = 10;
+            int multiplicationTableSize = 10;
 
-            for (int i = 1; i <= table; i++)
+            for (int i = 1; i <= multiplicationTableSize; i++)
             {
                 int result = num1 * i;
                 Console.WriteLine($"{num1} * {i} = {result}");

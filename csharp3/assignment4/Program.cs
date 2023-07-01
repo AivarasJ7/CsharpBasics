@@ -16,7 +16,7 @@
             decimal result3 = 14 + -4 * 6 / 11.0m;
             decimal result4 = 2 + 15 / 6.0m * 1 - 7 % 2;
 
-            Console.WriteLine(result1);
+            Console.WriteLine(result1); // Arba taip Console.WriteLine(-1 + 4 * 6)
             Console.WriteLine(result2);
             Console.WriteLine(result3);
             Console.WriteLine(result4);
