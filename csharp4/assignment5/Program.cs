@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            /*5.Liepkite vartotojui įvesti bet kokį sveikąjį skaičių. Išveskite šio skaičiaus daugybos lentelę nuo 1 iki 5. Pvz.:
+            /*5. Liepkite vartotojui įvesti bet kokį sveikąjį skaičių. Išveskite šio skaičiaus daugybos lentelę nuo 1 iki 5. Pvz.:
                 2 * 1 = 2
                 …
                 2 * 5 = 10

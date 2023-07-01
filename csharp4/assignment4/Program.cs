@@ -6,7 +6,7 @@ namespace assignment4
     {
         static void Main(string[] args)
         {
-            /*Liepkite vartotojui įvesti tris skaičius. Išveskite visų šių skaičių sumą, skirtumą, sandaugą ir dalmenį,
+            /*4. Liepkite vartotojui įvesti tris skaičius. Išveskite visų šių skaičių sumą, skirtumą, sandaugą ir dalmenį,
               nurodant atliekamus veiksmus ir šių skaičių reikšmes ekrane. Pvz.:
               5 + 3 + 8 = 16
               5 - 3 - 8 = -6
