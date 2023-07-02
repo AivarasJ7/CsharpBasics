@@ -9,8 +9,10 @@
              */
             Console.Write("Įveskite skaičių: ");
             int num1 = int.Parse(Console.ReadLine());
+
             Console.Write("Įveskite skaičių: ");
             int num2 = int.Parse(Console.ReadLine());
+
             Console.Write("Įveskite skaičių: ");
             int num3 = int.Parse(Console.ReadLine());
 

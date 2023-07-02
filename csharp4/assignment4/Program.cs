@@ -14,8 +14,10 @@ namespace assignment4
 
             Console.Write("Iveskite skaičių: ");
             int num1 = int.Parse(Console.ReadLine());
+
             Console.Write("Iveskite skaičių: ");
             int num2 = int.Parse(Console.ReadLine());
+
             Console.Write("Iveskite skaičių: ");
             int num3 = int.Parse(Console.ReadLine());
 

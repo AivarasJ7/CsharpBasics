@@ -10,10 +10,10 @@
              */
 
             Console.Write("Įveskite temperatūrą °C:");
-            double celsius = Convert.ToDouble(Console.ReadLine());
+            decimal celsius = Convert.ToDecimal(Console.ReadLine());
 
-            double fahrenheit = (celsius * 9 / 5) + 32;
-            double kelvin = celsius + 273.15;
+            decimal fahrenheit = (celsius * 9 / 5) + 32;
+            decimal kelvin = celsius + 273.15m;
 
             Console.WriteLine("Temperatūra °F: " + fahrenheit);
             Console.WriteLine("Temperatūra K: " + kelvin);
