@@ -12,8 +12,6 @@
             Random random = new Random();
             int number = random.Next(-50, 51);
 
-            Console.WriteLine(number);
-
             Console.WriteLine(
                 number < 0 &&
                 (number % 3) % 2 == 0
