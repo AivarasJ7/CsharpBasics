@@ -24,7 +24,6 @@
             {
                 Console.WriteLine("Skaičius yra lygus 0");
             }
-
         }
     }
 }
