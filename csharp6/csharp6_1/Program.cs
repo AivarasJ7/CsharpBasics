@@ -9,6 +9,7 @@
 
             Random random = new Random();
             int number = random.Next(1, 101);
+
             if (number > 50)
             {
                 Console.WriteLine($"Skaičius {number} yra didesnis nei 50.");
