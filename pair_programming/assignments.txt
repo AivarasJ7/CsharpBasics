@@ -1,0 +1,7 @@
+//2.Paraðyti for, kuris iðvestø kas antrà skaièiø pradedant 0 ir baigiant 15.Kiekvienà skaièiø iðvesti toje paèioje eilutëje, po kiekvieno skaièiaus dedant tarpà.
+
+            //3.Paraðyti for, kuris iðvestø kas treèià skaièiø, pradedant 1 ir baigiant 20.Kiekvienà skaièiø iðvesti toje paèioje eilutëje taèiau apskliaudþiant lauþtiniais skliaustais.Pvz.: [1][4][7]...
+
+            //4.Paraðyti for, kuris eitø pro kiekvienà skaièiø nuo 1 iki 10.Jame apsiraðyti if sàlygà, kuri patikrintø ar dabartinis skaièius yra lyginis, jei taip tai ðá skaièiø iðvesti.
+
+            //5.Liepkite vartotojui ávesti rëþiø pradþià ir pabaigà. Patikrinkite, kad tai bûtø validu(pradþia turi bûti maþesnë nei pabaiga). Jei rëþiai tinkami, tuomet vykdyti for, kuris atskirose eilutëse iðvestø kiekvienà skaièiø ið tø rëþiø, bei atskiriant tarpu - tø skaièiø kvadratus.
