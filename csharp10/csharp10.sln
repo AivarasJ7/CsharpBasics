@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp10_3", "csharp10_3\cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp10_4", "csharp10_4\csharp10_4.csproj", "{0A7F3C0B-95C7-4555-B5FB-D9E0E1A769DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp10_5", "csharp10_5\csharp10_5.csproj", "{4D660A30-1835-4EA7-924D-425AD4EFDF01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0A7F3C0B-95C7-4555-B5FB-D9E0E1A769DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A7F3C0B-95C7-4555-B5FB-D9E0E1A769DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A7F3C0B-95C7-4555-B5FB-D9E0E1A769DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D660A30-1835-4EA7-924D-425AD4EFDF01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D660A30-1835-4EA7-924D-425AD4EFDF01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D660A30-1835-4EA7-924D-425AD4EFDF01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D660A30-1835-4EA7-924D-425AD4EFDF01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
