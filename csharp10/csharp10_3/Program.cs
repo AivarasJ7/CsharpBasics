@@ -21,32 +21,30 @@
                 Console.WriteLine("Įveskite antrąjį skaičių:");
                 double number2 = double.Parse(Console.ReadLine());
 
-                double sum = number1 + number2;
-                double difference = number1 - number2;
-                double multiply = number1 * number2;
-
                 if (number2 != 0)
                 {
 
                     double divide = number1 / number2;
-                    Console.WriteLine($"{number1} + {number2} = {sum}");
-                    Console.WriteLine($"{number1} - {number2} = {difference}");
-                    Console.WriteLine($"{number1} * {number2} = {multiply}");
-                    Console.WriteLine($"{number1} / {number2} = {divide}");
+                    Console.WriteLine($"{number1} + {number2} = {number1 + number2}");
+                    Console.WriteLine($"{number1} - {number2} = {number1 - number2}");
+                    Console.WriteLine($"{number1} * {number2} = {number1 * number2}");
+                    Console.WriteLine($"{number1} / {number2} = {number1 / number2}");
                 }
                 else
                 {
-                    Console.WriteLine($"{number1} + {number2} = {sum}");
-                    Console.WriteLine($"{number1} - {number2} = {difference}");
-                    Console.WriteLine($"{number1} * {number2} = {multiply}");
+                    Console.WriteLine($"{number1} + {number2} = {number1 + number2}");
+                    Console.WriteLine($"{number1} - {number2} = {number1 - number2}");
+                    Console.WriteLine($"{number1} * {number2} = {number1 * number2}");
                     Console.WriteLine("Dalyba iš 0 negalima.");
                 }
 
                 Console.WriteLine("Ar norite atlikti dar vieną skaičiavimą? (taip / ne)");
                 string input = Console.ReadLine();
 
-                if (input.ToLower() != "taip")
-                    runCalculator = false;
+                if (input.ToLower() == "exit")
+                {
+                    break;
+                }
 
                 Console.WriteLine();
             }
