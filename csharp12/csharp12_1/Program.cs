@@ -22,18 +22,18 @@ namespace csharp12_1
             // 2.Naudojant foreach cikla išspausdinti iš pirmojo projekto pasirinktą masyvą. 
             // Kiekvieną elementą spausdinant i atskirą eilutę.
 
-            foreach (string suit in cardSuits)
+            foreach (string cardSuit in cardSuits)
             {
-                Console.WriteLine(suit);
+                Console.WriteLine(cardSuit);
             }
 
             // 3. Naudojant foreach cikla išspausdinti kitą iš pirmojo projekto pasirinktą. Grupuoti elementus po 5 per eilute.
 
             int count = 0;
 
-            foreach (int grade in studentGrades)
+            foreach (int studentGrade in studentGrades)
             {
-                Console.Write($"{grade}, ");
+                Console.Write($"{studentGrade}, ");
                 count++;
                 if (count % 5 == 0)
                 {
