@@ -6,7 +6,7 @@
         {
             // 3. Susikurkite kintamąjį, kuris pasakytų kokia yra automobilio bako talpa.
 
-            int fuelTank = 65;
+            int fuelTankCapacity = 65;
 
             // Susikurkite masyvą, kuriame saugotumėte skirtingose kelionėse nuvažiuotų kilometrų rodmenis.
             // Masyvo elementų skaičius tai kartai kiek automobilis gali nuvažiuoti su pilnu baku.
@@ -16,21 +16,17 @@
             //Raskite:
             // 3.1.trumpiausią kelionę;
 
-            Console.Write("Trumpiausia kelione: ");
-            Console.WriteLine(trips.Min());
+            Console.WriteLine($"Trumpiausia kelione: {trips.Min()}");
 
             // 3.2.ilgiausią kelionę;
 
-            Console.Write("Ilgiausia kelione: ");
-            Console.WriteLine(trips.Max());
+            Console.WriteLine($"Ilgiausia kelione: {trips.Max()}");
 
             // 3.3.kiek vidutiniškai kuro sąnaudų sunaudojo automobilis kiekvienos kelionės metu;
 
             double totalFuelConsumption = trips.Sum();
-            double averageFuelConsumption = totalFuelConsumption / fuelTank;
 
-            Console.Write("Vidutiniškai kuro sąnaudų sunaudojo automobilis kiekvienos kelionės metu: ");
-            Console.WriteLine(averageFuelConsumption);
+            Console.Write($"Vidutiniškai kuro sąnaudų sunaudojo automobilis kiekvienos kelionės metu: {totalFuelConsumption / fuelTankCapacity}");
         }
     }
 }

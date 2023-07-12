@@ -43,8 +43,7 @@
 
             // 2.4.pažymių vidurkį;
 
-            Console.Write("Visu pazymiu vidurkis: ");
-            Console.WriteLine(studentGrades.Average());
+            Console.WriteLine($"Visu pazymiu vidurkis: {studentGrades.Average()}");
         }
     }
 }

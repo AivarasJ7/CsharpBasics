@@ -6,7 +6,7 @@
         {
             // 1. Susikurkite savaitės temperatūrų rodmenų masyvą. Raskite:
 
-            double[] weekTemperatures = { 22, 20, 26, 25, 24, 26, 21 };
+            int[] weekTemperatures = { 22, 20, 26, 25, 24, 26, 21 };
 
             // 1.1.žemiausią temperatūrą;
 
@@ -25,13 +25,11 @@
 
             // 1.4.temperatūrų esančių žemiau už vidurkį kiekį;
 
-            double weekTemperatureAverage = weekTemperatures.Average();
-
             int count = 0;
 
             foreach (double weektemperature in weekTemperatures)
             {
-                if (weektemperature < weekTemperatureAverage)
+                if (weektemperature < weekTemperatures.Average())
                 {
                     count++;
                 }
@@ -41,19 +39,17 @@
 
             // 1.5.temperatūrų esančių aukščiau už vidurkį kiekį;
 
-            double weekTemperatureAverage2 = weekTemperatures.Average();
-            
-            int count2 = 0;
+            count = 0;
 
             foreach (double weektemperature in weekTemperatures)
             {
-                if (weektemperature > weekTemperatureAverage2)
+                if (weektemperature > weekTemperatures.Average())
                 {
-                    count2++;
+                    count++;
                 }
             }
 
-            Console.WriteLine($"Temperaturu esanciu auksciau uz vidurki kiekis: {count2}");
+            Console.WriteLine($"Temperaturu esanciu auksciau uz vidurki kiekis: {count}");
         }
     }
 }
