@@ -19,7 +19,7 @@ namespace test1
             //nuvažiuotas atstumas kilometrais (pvz. 13.6),
 
             Console.WriteLine("Iveskite nuvažiuota atstuma (kilometrais):");
-            double distance = double.Parse(Console.ReadLine());
+            double distanceTravelled = double.Parse(Console.ReadLine());
 
             //sugaištas laikas minutėmis (pvz. 45),
 
@@ -34,13 +34,12 @@ namespace test1
             //Vieno kilometro kainą galite rasti suskaičiavę nuvažiuotą atstumą padauginus iš kilometrų kainos, 
             //plius sugaištą laiką minutėmis padauginus iš minutės kainos, plius įsėdimo mokestis ir viską padalinus iš nuvažiuotų kilometrų.
 
-            double totalCost = (distance * kmPrice) + (timeTraveled * minutePrice) + passengerFee;
-            double costPerKm = totalCost / distance * 100; 
+            double costPerKm = ((distanceTravelled * kmPrice) + (timeTraveled * minutePrice) + passengerFee) / distance * 100;
 
             //            [ ,] -imtinai
             //            ( , ) - ne imtinai
 
-            if (costPerKm <= 22)
+            if (costPerKm >= 0 && costPerKm <= 22)
             {
                 Console.WriteLine("Jūs pigiai pasivažinėjote.");
             }
@@ -52,7 +51,7 @@ namespace test1
             {
                 Console.WriteLine("Daug sumokėjote.");
             }
-            else
+            else if (costPerKm > 100)
             {
                 Console.WriteLine("Geriau rinkitės taksi.");
             }
