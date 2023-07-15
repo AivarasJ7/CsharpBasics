@@ -15,19 +15,17 @@
             };
 
             int sum = 0;
-            int count = 0;
 
-            for (int row = 0; row < studentGrades.GetLength(0); row++) // Nezinau ar gerai cia tie (row, col) bet labai man aiskiai matosi kas kaip vaiksto. Siaip pamenu sakei raideles turi buti i ir j? berods.
+            for (int row = 0; row < studentGrades.GetLength(0); row++)
             {
                 for (int col = 0; col < studentGrades.GetLength(1); col++)
                 {
                     sum += studentGrades[row, col];
-                    count++;
                 }
             }
 
             Console.WriteLine($"Sum: {sum}");
-            Console.WriteLine($"Average: {(double)sum / count}");
+            Console.WriteLine($"Average: {(double)sum / studentGrades.Length}");
         }
     }
 }
