@@ -18,8 +18,7 @@
 
             foreach (string word in wordsList)
             {
-                Console.Write($"{word} ");
-                Console.WriteLine(word.Length);
+                Console.Write($"{word} {word.Length}");
             }
         }
     }
