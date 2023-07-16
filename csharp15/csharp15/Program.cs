@@ -7,45 +7,37 @@
             // Užduotis 1: Sukurkite dvimatį masyvą su atsitiktiniais skaičiais ir parašykite programą, 
             // kuri apskaičiuotų kiekvieno stulpelio sumą.
 
-            int rows = 5;
-            int cols = 4;
-
             Random random = new Random();
 
-            int[,] array = new int[rows, cols];
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < cols; j++)
-                {
-                    array[i, j] = random.Next(1, 100);
-                }
-            }
+            int[,] array = new int[5, 4];
 
-            int[] columnSums = new int[cols];
-            for (int j = 0; j < cols; j++)
+            for (int row = 0; row < array.GetLength(0); row++)
             {
-                int sum = 0;
-                for (int i = 0; i < rows; i++)
+                for (int col = 0; col < array.GetLength(1); col++)
                 {
-                    sum += array[i, j];
+                    array[row, col] = random.Next(1, 100);
                 }
-                columnSums[j] = sum;
             }
 
             Console.WriteLine("Dvimatis masyvas:");
-            for (int i = 0; i < rows; i++)
+            for (int row = 0; row < array.GetLength(0); row++)
             {
-                for (int j = 0; j < cols; j++)
+                for (int col = 0; col < array.GetLength(1); col++)
                 {
-                    Console.Write(array[i, j] + "\t");
+                    Console.Write(array[row, col] + "\t");
                 }
                 Console.WriteLine();
             }
 
-            Console.WriteLine("Stulpelio sumos:");
-            for (int j = 0; j < cols; j++)
+            for (int col = 0; col < array.GetLength(1); col++)
             {
-                Console.WriteLine($"Stulpelis {j + 1}: {columnSums[j]}");
+                int columnSum = 0;
+                for (int row = 0; row < array.GetLength(0); row++)
+                {
+                    columnSum += array[row, col];
+                }
+
+                Console.WriteLine($"Stulpelis {col + 1}: {columnSum}");
             }
         }
     }
