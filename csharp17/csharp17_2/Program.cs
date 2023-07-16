@@ -14,11 +14,11 @@ namespace csharp17_2
             Console.Write("Iveskite studentu skaiciu: ");
             int numberOfStudents = int.Parse(Console.ReadLine());
 
-            // Pažymių įvedimas
             for (int i = 0; i < numberOfStudents; i++)
             {
                 Console.Write($"Iveskite {i + 1}-ojo studento pazymi: ");
                 int grade = int.Parse(Console.ReadLine());
+
                 studentGrades.Add(grade);
             }
 
