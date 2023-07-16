@@ -9,7 +9,7 @@ namespace csharp17_1
         {
             // 1. Sugeneruokite atsitiktinio dydžio sąrašą, kurį užpildykite atsitiktiniais skaičiais nuo 1 iki 100.
 
-            List<int> randomList = new List<int>();
+            List<int> randomNumbers = new List<int>();
 
             Random random = new Random();
 
@@ -18,12 +18,12 @@ namespace csharp17_1
             for (int i = 0; i < randomListSize; i++)
             {
                 int number = random.Next(1, 101);
-                randomList.Add(number);
+                randomNumbers.Add(number);
             }
 
             Console.WriteLine("Atsitiktinis sarasas:");
 
-            foreach (int number in randomList)
+            foreach (int number in randomNumbers)
             {
                 Console.WriteLine(number);
             }
@@ -31,23 +31,23 @@ namespace csharp17_1
             // Raskite: 
             //1.1.mažiausią skaičių;
 
-            Console.WriteLine($"Maziausias skaicius: {randomList.Min()}");
+            Console.WriteLine($"Maziausias skaicius: {randomNumbers.Min()}");
 
             // 1.2.didžiausią skaičių;
 
-            Console.WriteLine($"Didziausias skaicius: {randomList.Max()}");
+            Console.WriteLine($"Didziausias skaicius: {randomNumbers.Max()}");
 
             // 1.3.vidurkį;
 
-            Console.WriteLine($"Didziausias skaicius: {randomList.Average()}");
+            Console.WriteLine($"Didziausias skaicius: {randomNumbers.Average()}");
 
             // 1.4.kiek skaičių yra žemesni už vidurkį;
 
             int count = 0;
 
-            foreach (int number in randomList)
+            foreach (int number in randomNumbers)
             {
-                if (number < randomList.Average())
+                if (number < randomNumbers.Average())
                 {
                     count++;
                 }
@@ -57,7 +57,7 @@ namespace csharp17_1
 
             // 1.5.lyginių skaičių sumą
 
-            Console.WriteLine($"Lyginiu skaiciu suma: {randomList.Where(number => number % 2 == 0).Sum()}");
+            Console.WriteLine($"Lyginiu skaiciu suma: {randomNumbers.Where(number => number % 2 == 0).Sum()}");
         }
     }
 }
