@@ -34,6 +34,7 @@ namespace csharp18_1
                     negativeBoolCount++;
                 }
             }
+
             Console.WriteLine($"Sarase yra teigiamu reiksmiu: {positiveBoolCount}, o neigiamu yra {negativeBoolCount}");
         }
     }
