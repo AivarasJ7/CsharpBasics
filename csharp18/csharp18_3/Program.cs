@@ -27,10 +27,9 @@
             {
                 for (int col = 0; col < groceries.GetLength(1); col++)
                 {
-                    string word = groceries[row, col];
-                    if (word.StartsWith("B", StringComparison.OrdinalIgnoreCase))
+                    if (groceries[row, col].ToLower().StartsWith('b'))
                     {
-                        fruitAndVegetablesStartingWithB.Add(word);
+                        fruitAndVegetablesStartingWithB.Add(groceries[row, col]);
                     }
                 }
             }

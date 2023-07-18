@@ -7,23 +7,23 @@
             // 2.Parašykite programą, kuri leidžia vartotojui įvesti 10 žodžių į List<string> sąrašą 
             // ir suranda ilgiausią žodį bei atspausdina jį kartu su ilgiu.
 
-            List<string> ListOfUserWords = new List<string>();
+            List<string> userWords = new List<string>();
 
             for (int wordCount = 0; wordCount < 10; wordCount++)
             {
                 Console.WriteLine("Iveskite zodi: ");
                 string userInput = Console.ReadLine();
 
-                ListOfUserWords.Add(userInput);
+                userWords.Add(userInput);
             }
 
             string longestWord = "";
 
-            foreach (string userInput in ListOfUserWords)
+            foreach (string userWord in userWords)
             {
-                if (userInput.Length > longestWord.Length)
+                if (userWord.Length > longestWord.Length)
                 {
-                    longestWord = userInput;
+                    longestWord = userWord;
                 }
             }
 

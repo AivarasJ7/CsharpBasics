@@ -25,11 +25,11 @@ namespace csharp18_1
             foreach (bool value in boolList)
             {
                 Console.WriteLine($"{value} ");
-                if (value == true)
+                if (value)
                 {
                     positiveBoolCount++;
                 }
-                if (value == false)
+                else
                 {
                     negativeBoolCount++;
                 }
