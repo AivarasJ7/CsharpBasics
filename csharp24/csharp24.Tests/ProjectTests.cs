@@ -1,7 +1,6 @@
 using csharp24;
-using Xceed.Wpf.Toolkit;
 
-namespace Calculator
+namespace Csharp24.Tests
 {
     [TestClass]
     public class ProjectTests
