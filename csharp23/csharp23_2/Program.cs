@@ -17,10 +17,10 @@
             Console.Write("Iveskite savo hobio pavadinima:");
             string hobby = Console.ReadLine();
 
-            UserGreeting(name, age, hobby);
+            GreetUser(name, age, hobby);
         }
 
-        private static void UserGreeting(string name, int age, string hobby) 
+        private static void GreetUser(string name, int age, string hobby) 
         {
             Console.WriteLine($"Sveiki {name} jums yra {age} metu ir jusu hobis yra {hobby}");
         }
