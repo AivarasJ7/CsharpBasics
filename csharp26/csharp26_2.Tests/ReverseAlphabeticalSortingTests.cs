@@ -6,7 +6,7 @@ namespace csharp26_2.Tests
     public class ReverseAlphabeticalSortingTests
     {
         [TestMethod]
-        public void SortWordsReverseAlphabeticalWithWordsNamasAnanasasBebrasLaikrodisDurys()
+        public void CallingSortWordsReverseAlphabeticalWithWordsNamasAnanasasBebrasLaikrodisDurys()
         {
             // Arrange
             List<string> words = new List<string>()
@@ -35,7 +35,7 @@ namespace csharp26_2.Tests
         }
 
         [TestMethod]
-        public void SortWordsReverseAlphabeticalWithWordsLabasPetrasKatinasBatasVanduo()
+        public void CallingSortWordsReverseAlphabeticalWithWordsLabasPetrasKatinasBatasVanduo()
         {
             // Arrange
             List<string> words2 = new List<string>()
