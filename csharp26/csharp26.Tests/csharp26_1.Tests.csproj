@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\csharp26_1\csharp26_1.csproj" />
+    <ProjectReference Include="..\csharp26_2\csharp26_2.csproj" />
   </ItemGroup>
 
 </Project>
