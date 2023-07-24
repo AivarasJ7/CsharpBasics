@@ -7,8 +7,11 @@
             // Užduotis 1: Rasti pirmuosius n pirminių skaičių
             // Metodas: Sukurkite metodą, kuris generuoja n pirminių skaičių sąrašą.Parašykite testą.
 
-            int n = 10;
-            List<int> primeNumbers = GeneratePrimes(n);
+            int primeNumberCount = 10;
+            List<int> primeNumbers = GeneratePrimes(primeNumberCount);
+
+            string output = string.Empty;
+         
 
             Console.WriteLine("Pirminiai skaiciai:");
             foreach (int number in primeNumbers)
@@ -17,18 +20,18 @@
             }
         }
 
-        public static List<int> GeneratePrimes(int n)
+        public static List<int> GeneratePrimes(int primeNumberCount)
         {
             List<int> primes = new List<int>();
-            int numberToCheck = 2;
+            int nextNumber = 2;
 
-            while (primes.Count < n)
+            while (primes.Count < primeNumberCount)
             {
-                if (IsPrime(numberToCheck))
+                if (IsPrime(nextNumber))
                 {
-                    primes.Add(numberToCheck);
+                    primes.Add(nextNumber);
                 }
-                numberToCheck++;
+                nextNumber++;
             }
 
             return primes;
@@ -37,12 +40,16 @@
         public static bool IsPrime(int number)
         {
             if (number < 2)
+            {
                 return false;
+            }
 
             for (int i = 2; i <= Math.Sqrt(number); i++)
             {
                 if (number % i == 0)
+                {
                     return false;
+                }
             }
 
             return true;
