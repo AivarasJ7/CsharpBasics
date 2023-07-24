@@ -72,10 +72,10 @@ namespace csharp26_3.Tests
             registrationSystem.AddUser("Kazys", "Pass3");
 
             // Act
-            bool loginResult = registrationSystem.Login("Kazys", "Pass3");
+            bool isLoggedIn = registrationSystem.Login("Kazys", "Pass3");
 
             // Assert
-            Assert.IsTrue(loginResult);
+            Assert.IsTrue(isLoggedIn);
         }
 
         [TestMethod]
@@ -86,10 +86,10 @@ namespace csharp26_3.Tests
             registrationSystem.AddUser("Vardas", "Pass5");
 
             // Act
-            bool loginResult = registrationSystem.Login("Vardas", "Pass5");
+            bool isLoggedIn = registrationSystem.Login("Vardas", "Pass5");
 
             // Assert
-            Assert.IsTrue(loginResult);
+            Assert.IsTrue(isLoggedIn);
         }
     }
 }
