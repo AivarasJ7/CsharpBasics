@@ -56,5 +56,35 @@ namespace csharp27.Tests
 
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestMethod]
+        public void CalllingEvenNumbersSumFromListReturns0()
+        {
+            // arrange
+            List<int> numbers = null;
+
+            int expectedResult = 0;
+
+            //act
+            int actualResult = Calculator.EvenNumbersSumFromList(numbers);
+
+            //assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void CalllingEvenNumbersSumFromListWithEmptyListReturns0()
+        {
+            //arrange
+            List<int> numbers = new List<int>();
+
+            int expectedResult = 0;
+
+            //act
+            int actualResult = Calculator.EvenNumbersSumFromList(numbers);
+
+            //assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
