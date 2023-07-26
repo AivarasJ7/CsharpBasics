@@ -4,7 +4,7 @@ namespace csharp28.Tests
     public class SymbolCounterTests
     {
         [TestMethod]
-        public void CountTextSymbolsWithoutSpacesWithGivenTextWhichIsNullReturns0()
+        public void CountTextSymbolsWithoutSpacesWithNullReturns0()
         {
             // arrange
             string text = null;
@@ -18,7 +18,7 @@ namespace csharp28.Tests
         }
 
         [TestMethod]
-        public void CountTextSymbolsWithoutSpacesWithGivenTextWhichIsEmptyReturns0()
+        public void CountTextSymbolsWithoutSpacesWithEmptyStringReturns0()
         {
             // arrange
             string text = "";
@@ -41,7 +41,6 @@ namespace csharp28.Tests
 
             // act
 
-            text = text.Replace(" ", "");
             int actualResult = SymbolCounter.CountTextSymbolsWithoutSpaces(text);
 
             // assert
@@ -59,7 +58,6 @@ namespace csharp28.Tests
 
             // act
 
-            text = text.Replace(" ", "");
             int actualResult = SymbolCounter.CountTextSymbolsWithoutSpaces(text);
 
             // assert

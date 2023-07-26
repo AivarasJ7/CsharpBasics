@@ -8,15 +8,12 @@ namespace csharp28
         //Sukurkite metodą, kuriam padavus tekstą, šis suskaičiuoja kiek tekste yra simbolių, neskaitant tarpų.
 
         /// <summary>
-        /// 1. Duosime teksta ir suskaiciuosime kiek yra symboliu (neskaitant tarpu)
-        /// 2. Paduodame teksta kuris yra null
-        /// 2.1 Suskaiciuotu simboliu rezultatas jeigu tekstas buvo paduotas null turi buti 0
-        /// 3. Paduodame teksta kuris yra tuscias
-        /// 3.1 Suskaiciuotu simboliu rezultatas jeigu tekstas buvo paduotas tuscias turi buti 0
-        /// 4 Paduodame teksta su tarpais
-        /// 4.2 Isimame tarpus is teksto
-        /// 4.3 Skaciuojame simbolius (su jau isimtais tarpais is teksto)
-        /// 4.4 Gauname rezultata
+        /// 1. Gauname tekstą
+        /// 1.1 Jeigu tekstas tuščias arba null grąžiname 0
+        /// 2. Skaičiuojame simbolius be tarpų
+        /// 2.1. Išimame tarpus iš teksto
+        /// 2.2. Suskaičiuojame simbolius tekste
+        /// 2.3. Grąžiname simbolių skaičių.
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
