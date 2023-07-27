@@ -16,19 +16,21 @@ namespace csharp29
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public static int CalculateFactorial(int number)
+        public static int Calculate(int number)
         {
             if (number <= 1)
+            {
                 return 1;
+            }
 
-            int factorial = 1;
+            int factorialResult = 1;
 
             for (int i = 2; i <= number; i++)
             {
-                factorial *= i;
+                factorialResult *= i;
             }
 
-            return factorial;
+            return factorialResult;
         }
     }
 }

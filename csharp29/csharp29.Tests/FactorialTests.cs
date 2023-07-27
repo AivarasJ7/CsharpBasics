@@ -14,7 +14,7 @@ namespace csharp29.Tests
             int expectedResult = 1;
 
             // act
-            int actualResult = Factorial.CalculateFactorial(number);
+            int actualResult = Factorial.Calculate(number);
 
             // assert
 
@@ -29,7 +29,7 @@ namespace csharp29.Tests
             int expectedResult = 1;
 
             // act
-            int actualResult = Factorial.CalculateFactorial(number);
+            int actualResult = Factorial.Calculate(number);
 
             // assert
 
@@ -44,7 +44,7 @@ namespace csharp29.Tests
             int expectedResult = 120;
 
             // act
-            int actualResult = Factorial.CalculateFactorial(number);
+            int actualResult = Factorial.Calculate(number);
 
             // assert
 
@@ -59,7 +59,7 @@ namespace csharp29.Tests
             int expectedResult = 24;
 
             // act
-            int actualResult = Factorial.CalculateFactorial(number);
+            int actualResult = Factorial.Calculate(number);
 
             // assert
 
