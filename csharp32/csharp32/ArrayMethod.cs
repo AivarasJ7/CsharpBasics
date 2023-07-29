@@ -17,7 +17,9 @@ namespace csharp32
         /// <param name="element2"></param>
         public static void SwapElements(ref int element1, ref int element2)
         {
-            throw new NotImplementedException();
+            int temporary = element1; // issisaugom element1 value
+            element1 = element2; // "permetam" element2 value i element1
+            element2 = temporary; // atsiemam "element1" issaugota anksciau value ir priskiriam element2
         }
     }
 }
