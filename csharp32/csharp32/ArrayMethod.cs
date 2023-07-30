@@ -9,17 +9,23 @@ namespace csharp32
         // Sukurkite metodą, kuris sukeičia masyvo elementus vietomis naudodamas "ref" parametrus.
 
         /// <summary>
-        /// 1. Pasikreipsime i metoda
-        /// 1.1 Apkeisime pirma ir antra elementa vietomis
+        /// 1.0 Apkeisime pirma ir antra elementa vietomis
         /// 1.2 Grazinsime elementus jau sukeistus vietomis
         /// </summary>
         /// <param name="element1"></param>
         /// <param name="element2"></param>
-        public static void SwapElements(ref int element1, ref int element2)
+        public static int[] SwapElementsInArray(int[] array, int element1, int element2)
         {
-            int temporary = element1; // issisaugom element1 value
-            element1 = element2; // "permetam" element2 value i element1
-            element2 = temporary; // atsiemam "element1" issaugota anksciau value ir priskiriam element2
+            if (array is null)
+            {
+                return new int[0]; 
+            }
+
+            int temp = array[element1];
+            array[element1] = array[element2];
+            array[element2] = temp;
+
+            return new int[] { array[element1], array[element2] };
         }
     }
 }

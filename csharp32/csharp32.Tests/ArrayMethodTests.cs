@@ -4,33 +4,50 @@ namespace csharp32.Tests
     public class ArrayMethodTests
     {
         [TestMethod]
-        public void CallingSwapElementsWithElement1AndElement2ReturnsSwappedPositions()
+        public void CallingSwapElementsInArrayWithNullArrayReturnsSwappedElements0()
         {
-            // arrange
-            int element1 = 1;
-            int element2 = 2;
+            // Arrange
+            int[] array = null;
+            int element1 = 0;
+            int element2 = 1;
 
-            //act
-            ArrayMethod.SwapElements(ref element1, ref element2);
+            // Act
+            int[] resultArray = ArrayMethod.SwapElementsInArray(array, element1, element2);
 
-            //assert
-            Assert.AreEqual(2, element1);
-            Assert.AreEqual(1, element2);
+            // Assert
+            Assert.IsNotNull(resultArray, "Masyvas negali buti null");
         }
 
         [TestMethod]
-        public void CallingSwapElementsWithElement10AndElement20ReturnsSwappedPositions()
+        public void CallingSwapElementsInArrayWithGivenArrayReturnsSwappedFirstAndSecondElements()
         {
             // Arrange
-            int element1 = 10;
-            int element2 = 20;
+            int[] array = {10, 20, 30, 40};
+            int element1 = 0;
+            int element2 = 1;
 
             // Act
-            ArrayMethod.SwapElements(ref element1, ref element2);
+            int[] resultArray = ArrayMethod.SwapElementsInArray(array, element1, element2);
+
+            // Assert 
+            Assert.AreEqual(20, resultArray[0]);
+            Assert.AreEqual(10, resultArray[1]);
+        }
+
+        [TestMethod]
+        public void CallingSwapElementsInArrayWithGivenArrayReturnsSwappedFirstAndThirdElements()
+        {
+            // Arrange
+            int[] array = {1, 2, 3, 4};
+            int element1 = 0;
+            int element3 = 2;
+
+            // Act
+            int[] resultArray = ArrayMethod.SwapElementsInArray(array, element1, element3);
 
             // Assert
-            Assert.AreEqual(20, element1);
-            Assert.AreEqual(10, element2);
+            Assert.AreEqual(3, resultArray[0]);
+            Assert.AreEqual(1, resultArray[1]);
         }
     }
 }
