@@ -16,21 +16,13 @@
         /// <param name="min"></param>
         public static void FindArrayMaxMin(int[] array, out int max, out int min)
         {
-            max = int.MinValue;
-            min = int.MaxValue;
-
-            foreach (int element in array)
+            if (array is null)
             {
-                if (element > max)
-                {
-                    max = element;
-                }
-
-                if (element < min)
-                { 
-                    min = element; 
-                }
+                throw new ArgumentException("Masyvas negali buti 'null' ");
             }
+
+            max = array.Max();
+            min = array.Min();
         }
     }
 }

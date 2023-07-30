@@ -4,6 +4,17 @@ namespace csharp31.Tests
     public class ArrayCalculationTests
     {
         [TestMethod]
+        public void FindArrayMaxMinWithNullArrayReturnsArgumentException()
+        {
+            // Arrange
+            int[] array = null;
+            int actualMax, actualMin;
+
+            // Act & Assert
+            Assert.ThrowsException<ArgumentException>(() => ArrayCalculations.FindArrayMaxMin(array, out actualMax, out actualMin), "Masyvas negali buti 'null' ");
+        }
+
+        [TestMethod]
         public void FindArrayMaxMinWithGivenArrayReturns10MaxAnd2Min()
         {
             // arrange
