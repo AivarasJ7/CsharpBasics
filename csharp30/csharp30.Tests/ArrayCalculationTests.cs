@@ -4,7 +4,21 @@ namespace csharp30.Tests
     public class ArrayCalculationTests
     {
         [TestMethod]
-        public void CountTwoDimensionalArraySumWithGivenListReturns44()
+        public void CountTwoDimensionalArraySumWithNull2dArrayReturnsZero()
+        {
+            // arrange
+            int[,] array = null;
+            int expectedResult = 0;
+
+            // act
+            int actualResult = ArrayCalculation.CountTwoDimensionalArraySum(array);
+
+            // assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void CountTwoDimensionalArraySumWithGiven2dArrayReturns44()
         {
             // arrange
             int[,] array = new int[,]
@@ -24,7 +38,7 @@ namespace csharp30.Tests
         }
 
         [TestMethod]
-        public void Count2dArraySumWithGivenListReturns28()
+        public void Count2dArraySumWithGiven2dArrayReturns28()
         {
             // arrange
             int[,] array = new int[,]

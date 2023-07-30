@@ -16,6 +16,11 @@ namespace csharp30
         /// <returns></returns>
         public static int CountTwoDimensionalArraySum(int[,] array)
         {
+            if (array is null)
+            {
+                return 0;
+            }
+
             int sum = 0;
 
             foreach (int element in array)
