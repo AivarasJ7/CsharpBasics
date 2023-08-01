@@ -25,31 +25,26 @@
         {
             if (array is null)
             {
-                return new string[0]; 
+                return new string[0];
+            }
+
+            static string FizzBuzz(int number)
+            {
+                if (number % 15 == 0)
+                    return "FizzBuzz";
+                else if (number % 3 == 0)
+                    return "Fizz";
+                else if (number % 5 == 0)
+                    return "Buzz";
+                else
+                    return number.ToString();
             }
 
             string[] resultArray = new string[array.Length];
 
             for (int i = 0; i < array.Length; i++)
             {
-                int number = array[i];
-
-                if (number % 3 == 0 && number % 5 == 0)
-                {
-                    resultArray[i] = "FizzBuzz";
-                }
-                else if (number % 5 == 0)
-                {
-                    resultArray[i] = "Buzz";
-                }
-                else if (number % 3 == 0)
-                {
-                    resultArray[i] = "Fizz";
-                }
-                else
-                {
-                    resultArray[i] = number.ToString();
-                }
+                resultArray[i] = FizzBuzz(array[i]);
             }
 
             return resultArray;
