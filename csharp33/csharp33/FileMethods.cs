@@ -19,18 +19,18 @@
         /// <summary>
         /// 1. Nuskaitome failo turinį ir parsinešame jį kaip "string"
         /// </summary>
-        /// <param name="Path"></param>
+        /// <param name="path"></param>
         /// <returns></returns>
-        public static List<string> ReadFromFile(string Path)
+        public static List<string> ReadFromFile(string path)
         {
-            if (!File.Exists(Path))
+            if (!File.Exists(path))
             {
                 return new List<string>();
             }
 
             List<string> lines = new List<string>();
 
-            using StreamReader sr = new StreamReader(Path);
+            using StreamReader sr = new StreamReader(path);
 
             while (!sr.EndOfStream)
             {
@@ -43,15 +43,28 @@
 
         /// <summary>
         /// 1.Konvertuosim skaičius iš string sąrašo į int formato sąrašą
-        /// 1.1 Iteruosim per kekvieną eilutę ir konvertuosim į "int" ir pasidarysim "int" "list'a" pridedami kekvieną skaičių. 
+        /// 1.1 Iteruosim per kekvieną eilutę ir konvertuosim į "int" ir pasidarysim "int" "list'a" pridedami kekvieną skaičių.
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
         public static List<int> ConvertToNumberList(List<string> lines)
         {
+            if (lines is null)
             {
-                throw new NotImplementedException();
+                return new List<int>();
             }
+
+            List<int> numbers = new List<int>();
+
+            foreach (string line in lines)
+            {
+                if (int.TryParse(line, out int number))
+                {
+                    numbers.Add(number);
+                }
+            }
+
+            return numbers;
         }
 
         /// <summary>
@@ -61,21 +74,17 @@
         /// <returns></returns>
         public static int FindMaxNumberFromFile(List<int> numbers)
         {
-            {
-                throw new NotImplementedException();
-            }
+            return numbers.Max();
         }
 
         /// <summary>
-        /// 1. Surasime mažiausią skaičių saraše, kuris yra parneštas iš failo
+        /// 1. Surasime mažiausią skaičių saraše, kuris yra parneštas iš failo.
         /// </summary>
         /// <param name="numbers"></param>
         /// <returns></returns>
         public static int FindMinNumberFromFile(List<int> numbers)
         {
-            {
-                throw new NotImplementedException();
-            }
+            return numbers.Min();
         }
 
         /// <summary>
@@ -85,9 +94,7 @@
         /// <returns></returns>
         public static double CalculateAverageFromFile(List<int> numbers)
         {
-            {
-                throw new NotImplementedException();
-            }
+            return numbers.Average();
         }
 
         /// <summary>
@@ -97,9 +104,10 @@
         /// <returns></returns>
         public static int GetRandomNumberFromFile(List<int> numbers)
         {
-            {
-                throw new NotImplementedException();
-            }
+            Random random = new Random();
+            int randomIndex = random.Next(numbers.Count);
+
+            return numbers[randomIndex];
         }
     }
 }
