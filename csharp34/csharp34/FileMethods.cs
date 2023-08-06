@@ -37,16 +37,34 @@ namespace csharp34
 
         /// <summary>
         /// 1. Skaičiuosime kekvieną žodį kol pasibaigs "stream" ir pridėsime žodį prie žodžių kiekio.
+        /// 2. null apsauga.
         /// </summary>
         /// <param name="path"></param>
         /// <param name="word"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        public static int ProcessFileOnReadingAndCountWords(
-            string path,
-            string word)
+        public static int CountWordsInFile(string path)
         {
-            throw new NotImplementedException();
+            if (path is null)
+            {
+                throw new ArgumentNullException(nameof(path), "(path) negali buti null");
+            }
+
+            using StreamReader sr = new StreamReader(path);
+
+            int wordCount = 0;
+
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                if (!string.IsNullOrWhiteSpace(line))
+                {
+                    string[] words = line.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                    wordCount += words.Length;
+                }
+            }
+
+            return wordCount;
         }
     }
 }
