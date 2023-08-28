@@ -48,7 +48,7 @@
 
             foreach (Student student in students)
             {
-                student.MakeAGreeting();
+                student.Greet();
             }
         }
     }

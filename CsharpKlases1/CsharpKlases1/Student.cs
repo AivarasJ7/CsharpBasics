@@ -18,12 +18,10 @@
         public int Weight;
 
         //metodai - (public)
-        public void MakeAGreeting()
+        public void Greet()
         {
-            Console.WriteLine();
             Console.WriteLine($"As {Name} {Surname}. Esu {Gender}. Man yra {Age} metai-(u), " +
                 $"mano ugis yra {Height}cm, o svoris {Weight}kg.");
         }
-
     }
 }
