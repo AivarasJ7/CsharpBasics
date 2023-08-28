@@ -9,6 +9,6 @@
         //savybes - properties (public)
         public string Name;
         public string Lector;
-        public List<string> StudentList;
+        public List<string> Students;
     }
 }
