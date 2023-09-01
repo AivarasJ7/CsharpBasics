@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.WebRequestMethods;
+﻿
 
 namespace CsharpKlases3_1
 {
@@ -29,17 +23,13 @@ namespace CsharpKlases3_1
         public decimal Price;
         public string Currency;
         public string FlightNumber;
-        public FlightClass Class;
-
-        public enum FlightClass
-        {
-            Economy,
-            Business
-        }
+        public string Class;
 
         public string GetFlightInfo()
         {
-
+            return $"Skrydis {FlightNumber}: {DepartureCity} ({DepartureDateTime}) -> {ArrivalCity} ({ArrivalDateTime})\n" +
+                   $"Klasė: {Class}\n" +
+                   $"Kaina: {Price} {Currency}";
         }
     }
 }
