@@ -1,6 +1,4 @@
-﻿
-
-namespace CsharpKlases3_1
+﻿namespace CsharpKlases3_1
 {
     public class Flight
     {
