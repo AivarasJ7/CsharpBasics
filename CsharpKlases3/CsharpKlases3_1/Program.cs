@@ -16,40 +16,52 @@
                 Console.WriteLine();
             }
         }
-
+        
         public static List<Flight> ReadFlightsFromFile(string fileName)
         {
             List<Flight> flights = new List<Flight>();
 
-            try
-            {
                 string[] lines = File.ReadAllLines(fileName);
 
                 foreach (string line in lines)
                 {
                     string[] data = line.Split(' ');
 
-                    Flight flight = new Flight
+                    if (data.Length >= 10)
                     {
-                        DepartureCity = data[0],
-                        ArrivalCity = data[1],
-                        DepartureDateTime = DateTime.Parse($"{data[2]} {data[3]}"),
-                        ArrivalDateTime = DateTime.Parse($"{data[4]} {data[5]}"),
-                        Price = decimal.Parse(data[6]),
-                        Currency = data[7],
-                        FlightNumber = data[8],
-                        Class = data[9]
-                    };
+                        Flight flight = new Flight
+                        {
+                            DepartureCity = data[0],
+                            ArrivalCity = data[1],
+                            DepartureDateTime = DateTime.Parse($"{data[2]} {data[3]}"),
+                            ArrivalDateTime = DateTime.Parse($"{data[4]} {data[5]}"),
+                            Price = decimal.Parse(data[6]),
+                            Currency = data[7],
+                            FlightNumber = data[8],
+                            Class = data[9]
+                        };
 
-                    flights.Add(flight);
+                        flights.Add(flight);
+                    }
+                }
+                return flights;
+        }
+
+        // 3. Sukurkite metodą, kuris Flight sąraše suranda skrydžius pagal IATA.
+        // Grąžina naują išfiltruotą Skrydžių sąrašą. Pvz. Padavus from: VNO, to: STO... grąžina visus skrydžius iš Vilniaus į Stockholm.
+        // Šis metodas turi būti ištestuotas.
+        public static List<Flight> FindFlightsByIATA(List<Flight> flights, string fromIATA, string toIATA)
+        {
+            List<Flight> filteredFlights = new List<Flight>();
+
+            foreach (Flight flight in flights)
+            {
+                if (flight.DepartureCity == fromIATA && flight.ArrivalCity == toIATA)
+                {
+                    filteredFlights.Add(flight);
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Klaida skaitant faila: " + ex.Message);
-            }
-
-            return flights;
+            return filteredFlights;
         }
     }
 }

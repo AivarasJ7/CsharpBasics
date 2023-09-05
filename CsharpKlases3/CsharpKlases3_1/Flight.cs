@@ -13,7 +13,6 @@
         // - klasė(Economy, Business)
         // - klasė turi turėti metodą GetFlightInfo, kuris grąžina formatuotą informaciją apie skrydį.
 
-        //savybes - properties (public)
         public string DepartureCity;
         public string ArrivalCity;
         public DateTime DepartureDateTime;
