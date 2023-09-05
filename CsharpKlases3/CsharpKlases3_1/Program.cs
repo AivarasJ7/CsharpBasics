@@ -21,28 +21,35 @@
         {
             List<Flight> flights = new List<Flight>();
 
-                using (StreamReader sr = new StreamReader(fileName))
+            try
+            {
+                string[] lines = File.ReadAllLines(fileName);
+
+                foreach (string line in lines)
                 {
-                    string line;
-                    while ((line = sr.ReadLine()) != null)
+                    string[] data = line.Split(' ');
+
+                    Flight flight = new Flight
                     {
-                        string[] data = line.Split(' ');
+                        DepartureCity = data[0],
+                        ArrivalCity = data[1],
+                        DepartureDateTime = DateTime.Parse($"{data[2]} {data[3]}"),
+                        ArrivalDateTime = DateTime.Parse($"{data[4]} {data[5]}"),
+                        Price = decimal.Parse(data[6]),
+                        Currency = data[7],
+                        FlightNumber = data[8],
+                        Class = data[9]
+                    };
 
-                        Flight flight = new Flight
-                        {
-                            DepartureCity = data[0],
-                            ArrivalCity = data[1],
-                            DepartureDateTime = DateTime.Parse($"{data[2]} {data[3]}"),
-                            ArrivalDateTime = DateTime.Parse($"{data[4]} {data[5]}"),
-                            Price = decimal.Parse(data[6]),
-                            Currency = data[7],
-                            FlightNumber = data[8],
-                            Class = data[9]
-                        };
-
-                        flights.Add(flight);
-                    }
+                    flights.Add(flight);
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Klaida skaitant faila: " + ex.Message);
+            }
+
+            return flights;
         }
     }
+}
