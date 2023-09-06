@@ -33,14 +33,13 @@
                         {
                             DepartureCity = data[0],
                             ArrivalCity = data[1],
-                            DepartureDateTime = DateTime.Parse($"{data[2]} {data[3]}"),
-                            ArrivalDateTime = DateTime.Parse($"{data[4]} {data[5]}"),
+                            DepartureTime = DateTime.Parse($"{data[2]} {data[3]}"),
+                            ArrivalTime = DateTime.Parse($"{data[4]} {data[5]}"),
                             Price = decimal.Parse(data[6]),
                             Currency = data[7],
                             FlightNumber = data[8],
                             Class = data[9]
                         };
-
                         flights.Add(flight);
                     }
                 }

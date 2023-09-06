@@ -15,8 +15,8 @@
 
         public string DepartureCity;
         public string ArrivalCity;
-        public DateTime DepartureDateTime;
-        public DateTime ArrivalDateTime;
+        public DateTime DepartureTime;
+        public DateTime ArrivalTime;
         public decimal Price;
         public string Currency;
         public string FlightNumber;
@@ -24,7 +24,7 @@
 
         public string GetFlightInfo()
         {
-            return $"Skrydis {FlightNumber}: {DepartureCity} ({DepartureDateTime}) -> {ArrivalCity} ({ArrivalDateTime})\n" +
+            return $"Skrydis {FlightNumber}: {DepartureCity} ({DepartureTime}) -> {ArrivalCity} ({ArrivalTime})\n" +
                    $"Klasė: {Class}\n" +
                    $"Kaina: {Price} {Currency}";
         }
