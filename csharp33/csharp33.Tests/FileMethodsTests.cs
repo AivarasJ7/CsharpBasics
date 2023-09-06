@@ -114,7 +114,7 @@ namespace csharp33.Tests
         }
 
         [TestMethod]
-        public void CalculateAverageFromFileReturnsAverage8_571428571428571() // Nežinau kaip kableli arba taška iterpti :D :(
+        public void CalculateAverageFromFileReturnsAverageCorrectAnswer()
         {
             // Arrange
             List<int> numbers = new List<int> { 2, 5, 7, 1, 10, 18, 17 };
