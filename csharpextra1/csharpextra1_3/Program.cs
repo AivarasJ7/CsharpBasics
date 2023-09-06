@@ -34,9 +34,10 @@
             {
                 result += i;
                 if (i < lastNum)
+                {
                     result += " " + operatorSymbol + " ";
+                }
             }
-
             return result;
         }
     }
