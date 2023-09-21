@@ -20,17 +20,22 @@
             {
                 Console.WriteLine("Pasirinkite, ką darysite:");
                 Console.WriteLine("1 - Prideti nauja knyga");
-                Console.WriteLine("2 - Baigti");
+                Console.WriteLine("2 - Prideti nauja vadovėlį");
+                Console.WriteLine("3 - Baigti");
 
                 int choice = int.Parse(Console.ReadLine());
 
                 switch (choice)
                 {
                     case 1:
-                        AddNewBook(books);
+                        books.Add(AddNewBook(books));
                         break;
 
                     case 2:
+                        books.Add(AddNewTextbook(books));
+                        break;
+
+                    case 3:
                         DisplayBookInfo(books);
                         return;
 
@@ -41,7 +46,7 @@
             }
         }
 
-        static void AddNewBook(List<Book> books)
+        static Book AddNewBook(List<Book> books)
         {
             Console.WriteLine("Iveskite knygos pavadinima: ");
             string title = Console.ReadLine();
@@ -50,31 +55,27 @@
             Console.WriteLine("Iveskite knygos isleidimo metus: ");
             int publicationYear = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Ar tai yra vadovelis? (t/n): ");
-            string isTextbookInput = Console.ReadLine().ToLower();
+            return new Book(title, author, publicationYear);
+        }
 
-            if (isTextbookInput == "t")
-            {
-                Console.WriteLine("Iveskite vadovelio tema: ");
-                string subject = Console.ReadLine();
-                Textbook newTextbook = new Textbook(title, author, publicationYear, subject);
-                books.Add(newTextbook);
-            }
-            else if (isTextbookInput == "n")
-            {
-                Book newBook = new Book(title, author, publicationYear);
-                books.Add(newBook);
-            }
-            else
-            {
-                Console.WriteLine("Neteisingas pasirinkimas. Bandykite dar karta.");
-            }
+        static Textbook AddNewTextbook(List<Book> books)
+        {
+            Console.WriteLine("Iveskite vadovelio pavadinima: ");
+            string title = Console.ReadLine();
+            Console.WriteLine("Iveskite vadovelio autoriu: ");
+            string author = Console.ReadLine();
+            Console.WriteLine("Iveskite vadovelio isleidimo metus: ");
+            int publicationYear = int.Parse(Console.ReadLine());
+            Console.WriteLine("Iveskite vadovelio tema: ");
+            string subject = Console.ReadLine();
+
+            return new Textbook(title, author, publicationYear, subject);
         }
 
         static void DisplayBookInfo(List<Book> books)
         {
-            Console.WriteLine("Informacija apie knygas:");
-            foreach (var book in books)
+            Console.WriteLine("Informacija apie knygas ir vadovelius:");
+            foreach (Book book in books)
             {
                 if (book is Textbook textbook)
                 {
