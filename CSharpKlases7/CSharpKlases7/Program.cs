@@ -20,7 +20,7 @@
             {
                 Console.WriteLine("Pasirinkite, ką darysite:");
                 Console.WriteLine("1 - Prideti nauja knyga");
-                Console.WriteLine("2 - Prideti nauja vadovėlį");
+                Console.WriteLine("2 - Prideti nauja vadoveli");
                 Console.WriteLine("3 - Baigti");
 
                 int choice = int.Parse(Console.ReadLine());
@@ -28,11 +28,13 @@
                 switch (choice)
                 {
                     case 1:
-                        books.Add(AddNewBook(books));
+                        Book newBook = AddNewBook();
+                        books.Add(newBook);
                         break;
 
                     case 2:
-                        books.Add(AddNewTextbook(books));
+                        Textbook newTextbook = AddNewTextbook();
+                        books.Add(newTextbook);
                         break;
 
                     case 3:
@@ -46,7 +48,7 @@
             }
         }
 
-        static Book AddNewBook(List<Book> books)
+        private static Book AddNewBook()
         {
             Console.WriteLine("Iveskite knygos pavadinima: ");
             string title = Console.ReadLine();
@@ -58,7 +60,7 @@
             return new Book(title, author, publicationYear);
         }
 
-        static Textbook AddNewTextbook(List<Book> books)
+        private static Textbook AddNewTextbook()
         {
             Console.WriteLine("Iveskite vadovelio pavadinima: ");
             string title = Console.ReadLine();
@@ -72,7 +74,7 @@
             return new Textbook(title, author, publicationYear, subject);
         }
 
-        static void DisplayBookInfo(List<Book> books)
+        private static void DisplayBookInfo(List<Book> books)
         {
             Console.WriteLine("Informacija apie knygas ir vadovelius:");
             foreach (Book book in books)
