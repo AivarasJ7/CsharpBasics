@@ -29,11 +29,13 @@
                 switch (choice)
                 {
                     case 1:
-                        AddNewEmployee(employees);
+                        Employee newEmployee = AddNewEmployee();
+                        employees.Add(newEmployee);
                         break;
 
                     case 2:
-                        AddNewManager(employees);
+                        Manager newManager = AddNewManager();
+                        employees.Add(newManager);
                         break;
 
                     case 3:
@@ -50,7 +52,7 @@
             }
         }
 
-        static void AddNewEmployee(List<Employee> employees)
+        static Employee AddNewEmployee()
         {
             Console.WriteLine("Iveskite darbuotojo varda:");
             string name = Console.ReadLine();
@@ -59,11 +61,10 @@
             Console.WriteLine("Iveskite darbuotojo atlyginima:");
             decimal salary = decimal.Parse(Console.ReadLine());
 
-            Employee newEmployee = new Employee(name, jobTitle, salary);
-            employees.Add(newEmployee);
+            return new Employee(name, jobTitle, salary);
         }
 
-        static void AddNewManager(List<Employee> employees)
+        static Manager AddNewManager()
         {
             Console.WriteLine("Iveskite vadovo varda:");
             string name = Console.ReadLine();
@@ -74,14 +75,13 @@
             Console.WriteLine("Iveskite pavaldiniu skaičiu:");
             int numberOfSubordinates = int.Parse(Console.ReadLine());
 
-            Manager newManager = new Manager(name, jobTitle, salary, numberOfSubordinates);
-            employees.Add(newManager);
+            return new Manager(name, jobTitle, salary, numberOfSubordinates);
         }
 
         static void DisplayEmployeeAndManagerInfo(List<Employee> employees)
         {
             Console.WriteLine("Darbuotoju ir vadovu Informacija:");
-            foreach (var employee in employees)
+            foreach (Employee employee in employees)
             {
                 if (employee is Manager manager)
                 {
