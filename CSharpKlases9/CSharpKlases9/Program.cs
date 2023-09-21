@@ -36,11 +36,13 @@
                         break;
 
                     case 2:
-                        AddNewStudent(people);
+                        Student newStudent = AddNewStudent();
+                        people.Add(newStudent);
                         break;
 
                     case 3:
-                        AddNewTeacher(people);
+                        Teacher newTeacher = AddNewTeacher();
+                        people.Add(newTeacher);
                         break;
 
                     case 4:
@@ -57,7 +59,7 @@
             }
         }
 
-        static void AddNewPerson(List<Person> people)
+        private static void AddNewPerson(List<Person> people)
         {
             Console.WriteLine("Iveskite varda:");
             string name = Console.ReadLine();
@@ -68,7 +70,7 @@
             people.Add(person);
         }
 
-        static void AddNewStudent(List<Person> people)
+        private static Student AddNewStudent()
         {
             Console.WriteLine("Iveskite varda:");
             string name = Console.ReadLine();
@@ -77,11 +79,10 @@
             Console.WriteLine("Iveskite klases lygi:");
             string gradeLevel = Console.ReadLine();
 
-            Student student = new Student(name, age, gradeLevel);
-            people.Add(student);
+            return new Student(name, age, gradeLevel);
         }
 
-        static void AddNewTeacher(List<Person> people)
+        private static Teacher AddNewTeacher()
         {
             Console.WriteLine("Iveskite varda:");
             string name = Console.ReadLine();
@@ -90,11 +91,10 @@
             Console.WriteLine("Iveskite tema:");
             string subject = Console.ReadLine();
 
-            Teacher teacher = new Teacher(name, age, subject);
-            people.Add(teacher);
+            return new Teacher(name, age, subject);
         }
 
-        static void DisplayPersonInfo(List<Person> people)
+        private static void DisplayPersonInfo(List<Person> people)
         {
             Console.WriteLine("Informacija apie asmenis:");
             foreach (Person person in people)
