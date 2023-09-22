@@ -98,11 +98,11 @@
                 Console.WriteLine($"{animal.GetAnimalInfo()}");
                 Console.WriteLine($"Gyvunas sako: {animal.MakeSound()}");
 
-                if (animal is Dog dog)
+                if (animal is Dog)
                 {
                     Console.WriteLine($"Tai yra suo.");
                 }
-                else if (animal is Cat cat)
+                else if (animal is Cat)
                 {
                     Console.WriteLine($"Tai yra kate.");
                 }

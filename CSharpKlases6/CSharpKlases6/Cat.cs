@@ -6,11 +6,11 @@ namespace CSharpKlases6
     // Savo nuožiūra galite sugalvoti naujų paveldinčių klasių ir sąvybių.
     public class Cat : Animal
     {
-        public Cat(string name, int age, string breed, string color, bool likesMIlk) : base(name, age)
+        public Cat(string name, int age, string breed, string color, bool likesMilk) : base(name, age)
         {
             Breed = breed;
             Color = color;
-            LikesMilk = likesMIlk;
+            LikesMilk = likesMilk;
         }
 
         public string Breed { get; }
@@ -19,7 +19,7 @@ namespace CSharpKlases6
 
         public string GetCatInfo()
         {
-            return $", Veisle: {Breed}, Spalva: {Color}, Megsta piena: {LikesMilk}";
+            return $"Veisle: {Breed}, Spalva: {Color}, Megsta piena: {LikesMilk}";
         }
 
         public override string MakeSound()

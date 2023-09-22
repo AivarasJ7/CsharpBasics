@@ -17,7 +17,7 @@
 
         public string GetAnimalInfo()
         {
-            return $", Veisle: {Breed}, Spalva: {Color}, Yra policijos suo: {IsPoliceDog}";
+            return $"Veisle: {Breed}, Spalva: {Color}, Yra policijos suo: {IsPoliceDog}";
         }
 
         public override string MakeSound()
