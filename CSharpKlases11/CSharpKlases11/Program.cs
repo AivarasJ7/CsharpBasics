@@ -52,6 +52,7 @@
         {
             Console.WriteLine("Iveskite pastato adresa: ");
             string address = Console.ReadLine();
+
             Console.WriteLine("Iveskite pastato aukstu skaiciu: ");
             int numberOfFloors = int.Parse(Console.ReadLine());
 
@@ -62,8 +63,10 @@
         {
             Console.WriteLine("Iveskite gyvenamojo namo adresa: ");
             string address = Console.ReadLine();
+
             Console.WriteLine("Iveskite gyvenamojo namo aukstu skaiciu: ");
             int numberOfFloors = int.Parse(Console.ReadLine());
+
             Console.WriteLine("Iveskite gyvenamojo namo butu skaiciu: ");
             int numberOfApartments = int.Parse(Console.ReadLine());
 
