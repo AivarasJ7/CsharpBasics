@@ -56,8 +56,10 @@
         {
             Console.WriteLine("Iveskite darbuotojo varda:");
             string name = Console.ReadLine();
+
             Console.WriteLine("Iveskite darbuotojo pareigas:");
             string jobTitle = Console.ReadLine();
+
             Console.WriteLine("Iveskite darbuotojo atlyginima:");
             decimal salary = decimal.Parse(Console.ReadLine());
 
@@ -68,10 +70,13 @@
         {
             Console.WriteLine("Iveskite vadovo varda:");
             string name = Console.ReadLine();
+
             Console.WriteLine("Iveskite vadovo pareigas:");
             string jobTitle = Console.ReadLine();
+
             Console.WriteLine("Iveskite vadovo atlyginima:");
             decimal salary = decimal.Parse(Console.ReadLine());
+
             Console.WriteLine("Iveskite pavaldiniu skaičiu:");
             int numberOfSubordinates = int.Parse(Console.ReadLine());
 
