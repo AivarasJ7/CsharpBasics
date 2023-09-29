@@ -63,6 +63,7 @@
         {
             Console.WriteLine("Iveskite varda:");
             string name = Console.ReadLine();
+
             Console.WriteLine("Iveskite amziu:");
             int age = int.Parse(Console.ReadLine());
 
@@ -74,8 +75,10 @@
         {
             Console.WriteLine("Iveskite varda:");
             string name = Console.ReadLine();
+
             Console.WriteLine("Iveskite amziu:");
             int age = int.Parse(Console.ReadLine());
+
             Console.WriteLine("Iveskite klases lygi:");
             string gradeLevel = Console.ReadLine();
 
@@ -86,8 +89,10 @@
         {
             Console.WriteLine("Iveskite varda:");
             string name = Console.ReadLine();
+
             Console.WriteLine("Iveskite amziu:");
             int age = int.Parse(Console.ReadLine());
+
             Console.WriteLine("Iveskite tema:");
             string subject = Console.ReadLine();
 
