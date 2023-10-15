@@ -6,14 +6,14 @@
 
         public Square(double sideLength)
         {
-            sideLength = sideLength;
+            this.sideLength = sideLength;
         }
 
         private double sideLength;
 
         public override double GetArea()
         {
-            return sideLength * sideLength;
+            return Math.Pow(sideLength, 2);
         }
     }
 }

@@ -14,12 +14,6 @@ namespace CSharpKlases16
 
             Console.WriteLine("Apskritimo plotas: " + circle.GetArea());
             Console.WriteLine("Kvadrato plotas: " + square.GetArea());
-
-            Geometry geometry = new();
-
-            Console.WriteLine(geometry.GetPerimeter(5));
-            Console.WriteLine(geometry.GetPerimeter(5, 10));
-            Console.WriteLine(geometry.GetPerimeter(5, 10, 7));
         }
     }
 }

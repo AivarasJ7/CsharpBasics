@@ -6,14 +6,14 @@
 
         public Circle(double radius)
         {
-            radius = radius;
+            this.radius = radius;
         }
 
         private double radius;
 
         public override double GetArea()
         {
-            return Math.PI * radius * radius;
+            return Math.PI * Math.Pow(radius, 2);
         }
     }
 }
